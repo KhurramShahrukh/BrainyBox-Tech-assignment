@@ -5,17 +5,27 @@
     --font-sans: 'Nunito', sans-serif;
     --color-bgColor1: #242C35;
     --color-bgColor2: #1B222B;
+    --color-bgColor3: rgba(34, 44, 54, 0.3);
+    --color-bgColor4: #222C36;
+    --color-borderColor1: rgba(51, 59, 68, 0.5);
+    --color-borderColor2: #373F48;
     --color-hColor1: #13181E;
     --color-selected: #00A3CA;
     --color-textColor1: #F3F4F4;
     --color-textColor2: #C7CACC;
-    --text-clg:21px;
-    --text-cmd:18px;
-    --text-csm:14px;
-    --leading-clh: 24px;
+    --color-textColor3: #858B90;
+    --color-textColor4: #A6AAAE;
+    --color-textColor4: #A6AAAE;    
+    --color-graphColor1: #AA7EDD;
+    --color-graphColor2: #00A3CA;
+    --text-clg: 1.3125rem;    
+    --text-cmd: 1.125rem;
+    --text-csm: 0.875rem;
+    --leading-clh: 1.5rem;
 }
 
 body {
     font-family: var(--font-sans);
+    font-size: 1rem;
     color: #ffffff;
 }

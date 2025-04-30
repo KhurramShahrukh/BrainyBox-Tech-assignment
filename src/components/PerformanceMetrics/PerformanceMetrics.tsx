@@ -2,6 +2,7 @@ import LineChartGraph from "./LineChartGraph"
 import { IDataPoint } from "../../interfaces/PerformanceMetricsInterfaces";
 import { useEffect, useState } from "react";
 import { fetchIopsDataService, fetchThroughputDataService } from "../../services/PerformanceMetricsServices";
+import { IOPS_GRAPH, THROUGHPUT_GRAPH } from "../../utils/constants";
 
 
 
@@ -55,8 +56,8 @@ const PerformanceMetrics = () => {
     return (
         <div className='w-[calc(100vw-200px)] h-[100vh] bg-bgColor2 p-4'>
             <div className='text-clg text-textColor1'>Performance Metrics</div>
-            <LineChartGraph title='IOPS' data={iopsDataState} loadingData={loadingIops} errorData={errorIops} />
-            <LineChartGraph title='Throughput' data={throughputDataState} loadingData={loadingThroughput} errorData={errorThroughput} />
+            <LineChartGraph title='IOPS' data={iopsDataState} loadingData={loadingIops} errorData={errorIops} type={IOPS_GRAPH} />
+            <LineChartGraph title='Throughput' data={throughputDataState} loadingData={loadingThroughput} errorData={errorThroughput} type={THROUGHPUT_GRAPH} />
         </div>
     )
 }

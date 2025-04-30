@@ -1,6 +1,5 @@
 export interface IDataPoint {
     date: string;
-    value: number;
     Read: number;
     Write: number;
 }
@@ -10,4 +9,5 @@ export interface ILineChartGraph {
     data: IDataPoint[];
     loadingData: boolean;
     errorData: boolean;
+    type: string
 }

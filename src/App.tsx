@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import Menu from './components/Menu'
-import PerformanceMetrics from './components/PerformanceMetrics/PerformanceMetrics'
 import { PERFORMANCE } from './utils/constants'
+import PerformanceMetrics from './components/performance-metrics/PerformanceMetrics'
+import SnapshotPolicy from './components/snapshot-policy/SnapshotPolicy'
 
 const App = () => {
   const [selectedItem, setSelectedItem] = useState<string>(PERFORMANCE)
@@ -12,7 +13,7 @@ const App = () => {
       {selectedItem === PERFORMANCE ?
         <PerformanceMetrics />
         :
-        <></>
+        <SnapshotPolicy />
       }
     </div>
   )

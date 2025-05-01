@@ -1,8 +1,7 @@
 import { useState } from 'react'
-import Menu from './components/Menu'
 import { PERFORMANCE } from './utils/constants'
-import PerformanceMetrics from './components/performance-metrics/PerformanceMetrics'
-import SnapshotPolicy from './components/snapshot-policy/SnapshotPolicy'
+import Menu from './components/Menu'
+import Panel from './components/Panel'
 
 const App = () => {
   const [selectedItem, setSelectedItem] = useState<string>(PERFORMANCE)
@@ -10,11 +9,8 @@ const App = () => {
   return (
     <div className='flex'>
       <Menu selectedItem={selectedItem} setSelectedItem={setSelectedItem} />
-      {selectedItem === PERFORMANCE ?
-        <PerformanceMetrics />
-        :
-        <SnapshotPolicy />
-      }
+      <Panel selectedItem={selectedItem} />
+
     </div>
   )
 }

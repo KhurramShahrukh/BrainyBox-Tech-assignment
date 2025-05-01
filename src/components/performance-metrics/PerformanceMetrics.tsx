@@ -53,15 +53,17 @@ const PerformanceMetrics = () => {
     }, []);
 
     return (
-        <div className='w-[calc(100vw-12.5rem)] h-[100vh] bg-bgColor2 p-4'>
-            <div className="flex justify-between items-center">
+        <div className='p-4'>
+            <div className="flex items-center justify-between">
                 <div className='text-clg text-textColor1'>Performance Metrics</div>
-                <div className='text-csm text-textColor4 bg-bgColor4 border border-borderColor2 py-1 px-2 rounded flex justify-center items-center cursor-pointer'>
+                <div className='flex items-center justify-center px-2 py-1 border rounded cursor-pointer text-csm text-textColor4 bg-bgColor4 border-borderColor2'>
                     Last 31 days
                     <img className="px-2" src={arrow} />
                 </div>
             </div>
+            <br />
             <LineChartGraph title='IOPS' data={iopsDataState} loadingData={loadingIops} errorData={errorIops} type={IOPS_GRAPH} />
+            <br />
             <br />
             <LineChartGraph title='Throughput' data={throughputDataState} loadingData={loadingThroughput} errorData={errorThroughput} type={THROUGHPUT_GRAPH} />
         </div>

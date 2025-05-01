@@ -18,7 +18,7 @@ const LineChartGraph = (props: ILineChartGraph) => {
 
     return (
         <>
-            <div className='mx-8 mt-8 mb-2 text-cmd text-textColor2'>{title}</div>
+            <div className='mx-8 mb-2 text-cmd text-textColor2'>{title}</div>
             {loadingData ? <div className='mx-8 text-textColor3'>Loading graph...</div>
                 : errorData ? <div className='mx-8 text-textColor3'>Error in API. Please try again.</div>
                     :

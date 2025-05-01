@@ -1,4 +1,5 @@
 import { useState } from "react"
+import PolicyScheduleForm from "./PolicyScheduleForm"
 
 const SnapshotPolicy
     = () => {
@@ -20,6 +21,8 @@ const SnapshotPolicy
                     <div className="h-[2.25rem] w-[2.5rem] text-center p-1 border rounded-tl rounded-bl bg-bgInput2 border-borderInput2 text-cmd text-textColor1 inline-block">/</div>
                     <input className="bg-bgInput1 border border-borderInput1 rounded-tr rounded-br  text-cmd leading-clh p-1 text-textColorInput1 mt-1 min-w-[27.5rem] h-[2.25rem]" value={directoryValue} onChange={(e) => setDirectoryValue(e.target.value)} />
                 </div>
+                <br />
+                <PolicyScheduleForm />
             </div>
         )
     }

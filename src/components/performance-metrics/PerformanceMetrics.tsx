@@ -1,9 +1,14 @@
 import LineChartGraph from "./LineChartGraph"
-import { IDataPoint } from "../../interfaces/PerformanceMetricsInterfaces";
+import { IDataPoint, IDateRangeDropdown } from "../../interfaces/components/PerformanceMetricsInterfaces";
 import { useEffect, useState } from "react";
 import { fetchIopsDataService, fetchThroughputDataService } from "../../services/PerformanceMetricsServices";
 import { IOPS_GRAPH, THROUGHPUT_GRAPH } from "../../utils/constants";
-import arrow from '../../assets/arrow.png'
+import Dropdown from "../common/Dropdown";
+
+const performanceMetricsDropdownData: IDateRangeDropdown[] = [
+    { value: "Last 7 days" },
+    { value: "Last 30 days" },
+]
 
 const PerformanceMetrics = () => {
     const [iopsDataState, setIopsDataState] = useState<IDataPoint[]>([]);
@@ -56,10 +61,7 @@ const PerformanceMetrics = () => {
         <div className='p-4'>
             <div className="flex items-center justify-between">
                 <div className='text-clg text-textColor1'>Performance Metrics</div>
-                <div className='flex items-center justify-center px-2 py-1 border rounded cursor-pointer text-csm text-textColor4 bg-bgColor4 border-borderColor2'>
-                    Last 31 days
-                    <img className="px-2" src={arrow} />
-                </div>
+                <Dropdown options={performanceMetricsDropdownData} />
             </div>
             <br />
             <LineChartGraph title='IOPS' data={iopsDataState} loadingData={loadingIops} errorData={errorIops} type={IOPS_GRAPH} />

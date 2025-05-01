@@ -1,7 +1,7 @@
 import PerformanceMetrics from "./performance-metrics/PerformanceMetrics"
 import SnapshotPolicy from "./snapshot-policy/SnapshotPolicy"
 import { PERFORMANCE } from "../utils/constants"
-import { IPanel } from "../interfaces/PanelInterfaces"
+import { IPanel } from "../interfaces/components/PanelInterfaces"
 
 const Panel = (props: IPanel) => {
     const { selectedItem } = props

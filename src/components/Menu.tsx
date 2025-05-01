@@ -1,5 +1,5 @@
 import logo from '../assets/logo-default.png'
-import { IMenu } from '../interfaces/MenuInterfaces'
+import { IMenu } from '../interfaces/components/MenuInterfaces'
 import { PERFORMANCE, SNAPSHOT } from '../utils/constants'
 
 const Menu = (props: IMenu) => {

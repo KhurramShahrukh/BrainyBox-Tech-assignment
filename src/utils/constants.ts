@@ -1,4 +1,4 @@
-import { IDataPoint } from "../interfaces/PerformanceMetricsInterfaces";
+import { IDataPoint } from "../interfaces/components/PerformanceMetricsInterfaces";
 
 export const PERFORMANCE: string = "performance"
 export const SNAPSHOT: string = "snapshot"

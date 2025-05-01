@@ -7,7 +7,7 @@ import {
     ResponsiveContainer,
     ReferenceLine,
 } from 'recharts';
-import { ILineChartGraph } from '../../interfaces/PerformanceMetricsInterfaces';
+import { ILineChartGraph } from '../../interfaces/components/PerformanceMetricsInterfaces';
 import { IOPS_GRAPH } from '../../utils/constants';
 
 const LineChartGraph = (props: ILineChartGraph) => {

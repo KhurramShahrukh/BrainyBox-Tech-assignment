@@ -11,3 +11,7 @@ export interface ILineChartGraph {
     errorData: boolean;
     type: string
 }
+
+export interface IDateRangeDropdown {
+    value: string
+}

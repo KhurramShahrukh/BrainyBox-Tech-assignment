@@ -6,4 +6,5 @@ export interface IDropdownProps {
     options: IOption[];
     defaultValue?: string;
     onChange?: (value: string) => void;
+    type?: string;
 }

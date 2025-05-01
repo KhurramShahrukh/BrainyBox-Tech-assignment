@@ -4,6 +4,8 @@ export const PERFORMANCE: string = "performance"
 export const SNAPSHOT: string = "snapshot"
 export const IOPS_GRAPH = "IOPS_GRAPH"
 export const THROUGHPUT_GRAPH = "THROUGHPUT_GRAPH"
+export const DATE = "date"
+
 export const iopsData: IDataPoint[] = [
     { date: 'Dec 01', Read: 600, Write: 240 },
     { date: 'Dec 02', Read: 300, Write: 139 },

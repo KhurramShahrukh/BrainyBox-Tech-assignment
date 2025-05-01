@@ -11,7 +11,6 @@ const SnapshotPolicy
         const [isEnableSnapshotChecked, setIsEnableSnapshotChecked] = useState<boolean>(false);
         const [selectedSchedule, setSelectedSchedule] = useState<string>(snapshotPolicyDropdownData[0].value);
         const [selectedTime, setSelectedTime] = useState<ISelectedTime>({ hours: hoursDropdownData[0].value, minutes: minutesDropdownData[0].value });
-        console.log("🚀 ~ selectedTime:", selectedTime)
         const [selectedDays, setSelectedDays] = useState<string[]>([checkBoxDays[0], checkBoxDays[3]]);
         const [selectedRadio, setSelectedRadio] = useState<string>(radioOptions[0]);
         const [deleteAfterDaysValue, setDeleteAfterDaysValue] = useState<number>(14);

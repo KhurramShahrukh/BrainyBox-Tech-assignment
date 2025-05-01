@@ -20,7 +20,6 @@ const PolicyScheduleForm = (props: IPolicyScheduleForm) => {
         setDeleteDurationValue,
         setIsPolicyChecked
     } = props
-    console.log("🚀 ~ PolicyScheduleForm ~ selectedTime:", selectedTime)
     const scheduleChangeHandler = (value: string) => {
         setSelectedSchedule(value)
     }

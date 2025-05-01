@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { PERFORMANCE } from './utils/constants'
+import { PERFORMANCE } from './utils/Constants'
 import Menu from './components/Menu'
 import Panel from './components/Panel'
 

@@ -1,6 +1,6 @@
 import logo from '../assets/logo-default.png'
 import { IMenu } from '../interfaces/components/MenuInterfaces'
-import { PERFORMANCE, SNAPSHOT } from '../utils/constants'
+import { PERFORMANCE, SNAPSHOT } from '../utils/Constants'
 
 const Menu = (props: IMenu) => {
     const { selectedItem, setSelectedItem } = props

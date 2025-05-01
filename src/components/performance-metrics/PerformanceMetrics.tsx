@@ -2,7 +2,7 @@ import LineChartGraph from "./LineChartGraph"
 import { IDataPoint, IDateRangeDropdown } from "../../interfaces/components/PerformanceMetricsInterfaces";
 import { useEffect, useState } from "react";
 import { fetchIopsDataService, fetchThroughputDataService } from "../../services/PerformanceMetricsServices";
-import { IOPS_GRAPH, THROUGHPUT_GRAPH } from "../../utils/constants";
+import { IOPS_GRAPH, THROUGHPUT_GRAPH } from "../../utils/Constants";
 import Dropdown from "../common/Dropdown";
 
 const performanceMetricsDropdownData: IDateRangeDropdown[] = [

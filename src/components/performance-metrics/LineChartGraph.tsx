@@ -8,7 +8,7 @@ import {
     ReferenceLine,
 } from 'recharts';
 import { ILineChartGraph } from '../../interfaces/components/PerformanceMetricsInterfaces';
-import { IOPS_GRAPH } from '../../utils/constants';
+import { IOPS_GRAPH } from '../../utils/Constants';
 
 const LineChartGraph = (props: ILineChartGraph) => {
     const { title, data, loadingData, errorData, type } = props

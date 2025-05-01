@@ -1,5 +1,5 @@
 import { IDataPoint } from "../interfaces/components/PerformanceMetricsInterfaces";
-import { iopsData, throughputData } from "../utils/constants";
+import { iopsData, throughputData } from "./DummyData";
 
 export const fetchIopsDataService = async (): Promise<IDataPoint[]> => {
     return new Promise((resolve) => {

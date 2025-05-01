@@ -8,8 +8,8 @@ const SnapshotPolicy = lazy(() => import("./snapshot-policy/SnapshotPolicy"));
 
 const Panel = ({ selectedItem }: IPanel) => {
     return (
-        <div className='w-[calc(100vw-12.5rem)] min-h-[100vh] bg-bgColor2'>
-            <Suspense fallback={<div className="w-[calc(100vw-12.5rem)] min-h-[100vh] bg-bgColor2"></div>}>
+        <div className='w-[calc(100vw-13rem)] min-h-[100vh] bg-bgColor2'>
+            <Suspense fallback={<div className="w-[calc(100vw-13rem)] min-h-[100vh] bg-bgColor2"></div>}>
                 {selectedItem === PERFORMANCE ? <PerformanceMetrics /> : <SnapshotPolicy />}
             </Suspense>
         </div>

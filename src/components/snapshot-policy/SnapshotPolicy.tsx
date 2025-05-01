@@ -82,7 +82,7 @@ const SnapshotPolicy
                 />
                 <br />
                 <div className="text-textColor2 text-cmd ">Snapshot Locking</div>
-                <div className="text-textColor2 ">Locked snapshots cannot be deleted before the deletion schedule expires. For this feature to be available, snapshots must  be set to automatically delete.</div>
+                <div className="text-textColor2 pr-4">Locked snapshots cannot be deleted before the deletion schedule expires. For this feature to be available, snapshots must  be set to automatically delete.</div>
                 <input
                     disabled={selectedRadio === radioOptions[0]}
                     type="checkbox"

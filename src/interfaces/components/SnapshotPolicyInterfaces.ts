@@ -19,9 +19,9 @@ export interface IPolicyScheduleForm {
     selectedSchedule: string;
     setSelectedSchedule: (arg1: string) => void;
     selectedTime: ISelectedTime;
-    setSelectedTime: (arg1: ISelectedTime) => void;
+    setSelectedTime: React.Dispatch<React.SetStateAction<ISelectedTime>>;
     selectedDays: string[]
-    setSelectedDays: (arg1: string[]) => void;
+    setSelectedDays: React.Dispatch<React.SetStateAction<string[]>>;
     selectedRadio: string;
     setSelectedRadio: (arg1: string) => void;
     deleteAfterDaysValue: number;

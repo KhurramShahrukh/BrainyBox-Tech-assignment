@@ -1,6 +1,6 @@
 import { IDataPoint } from "../interfaces/components/PerformanceMetricsInterfaces";
 import { iopsData, throughputData } from "./DummyData";
-import { getCachedData, setCachedData } from "../utils/indexedDbUtils";
+import { getCachedData, setCachedData } from "../utils/IndexedDbUtils";
 
 export const fetchIopsDataService = async (): Promise<IDataPoint[]> => {
     const cacheKey = "iopsData";

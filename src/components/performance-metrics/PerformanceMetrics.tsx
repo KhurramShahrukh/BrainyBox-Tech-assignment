@@ -61,7 +61,10 @@ const PerformanceMetrics = () => {
         <div className='p-4'>
             <div className="flex items-center justify-between">
                 <div className='text-clg text-textColor1'>Performance Metrics</div>
-                <Dropdown options={performanceMetricsDropdownData} />
+                <Dropdown
+                    options={performanceMetricsDropdownData}
+                    defaultValue={performanceMetricsDropdownData[0].value}
+                />
             </div>
             <br />
             <LineChartGraph title='IOPS' data={iopsDataState} loadingData={loadingIops} errorData={errorIops} type={IOPS_GRAPH} />

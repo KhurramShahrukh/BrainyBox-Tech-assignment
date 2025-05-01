@@ -4,7 +4,7 @@ export interface IOption {
 
 export interface IDropdownProps {
     options: IOption[];
-    defaultValue?: string;
+    defaultValue: string;
     onChange?: (value: string) => void;
     type?: string;
 }

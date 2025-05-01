@@ -20,6 +20,7 @@ const PolicyScheduleForm = (props: IPolicyScheduleForm) => {
         setDeleteDurationValue,
         setIsPolicyChecked
     } = props
+    console.log("🚀 ~ PolicyScheduleForm ~ selectedTime:", selectedTime)
     const scheduleChangeHandler = (value: string) => {
         setSelectedSchedule(value)
     }
@@ -30,6 +31,7 @@ const PolicyScheduleForm = (props: IPolicyScheduleForm) => {
             ...(type === HOURS && { hours: value }),
             ...(type === MINUTES && { minutes: value }),
         }));
+
     };
 
     const changeDaysHandler = (checked: boolean, day: string) => {
@@ -81,8 +83,8 @@ const PolicyScheduleForm = (props: IPolicyScheduleForm) => {
                     <div className="inline-block">
                         <Dropdown
                             type={DATE}
-                            options={hoursDropdownData}
                             defaultValue={selectedTime.hours}
+                            options={hoursDropdownData}
                             onChange={(timeValue: string) => timeChangeHandler(timeValue, HOURS)}
                         />
                         {" "}
@@ -147,7 +149,11 @@ const PolicyScheduleForm = (props: IPolicyScheduleForm) => {
                                             className="input-no-spin p-1 align-bottom border rounded bg-bgInput1 border-borderInput1 text-cmd leading-clh text-textColor2 w-[2rem] h-[1.95rem]"
                                         />
                                         &nbsp;
-                                        <Dropdown options={durationDropdownData} defaultValue={deleteDurationValue} onChange={deleteDurationChangeHandler} />
+                                        <Dropdown
+                                            options={durationDropdownData}
+                                            defaultValue={deleteDurationValue}
+                                            onChange={deleteDurationChangeHandler}
+                                        />
                                     </>
                                 )}
                             </Fragment>

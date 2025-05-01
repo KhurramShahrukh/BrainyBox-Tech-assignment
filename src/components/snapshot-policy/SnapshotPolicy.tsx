@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import PolicyScheduleForm from "./PolicyScheduleForm"
 import { checkBoxDays, durationDropdownData, hoursDropdownData, minutesDropdownData, radioOptions, snapshotPolicyDropdownData } from "./Constants"
 import { ISelectedTime } from "../../interfaces/components/SnapshotPolicyInterfaces"
@@ -11,10 +11,28 @@ const SnapshotPolicy
         const [isEnableSnapshotChecked, setIsEnableSnapshotChecked] = useState<boolean>(false);
         const [selectedSchedule, setSelectedSchedule] = useState<string>(snapshotPolicyDropdownData[0].value);
         const [selectedTime, setSelectedTime] = useState<ISelectedTime>({ hours: hoursDropdownData[0].value, minutes: minutesDropdownData[0].value });
+        console.log("🚀 ~ selectedTime:", selectedTime)
         const [selectedDays, setSelectedDays] = useState<string[]>([checkBoxDays[0], checkBoxDays[3]]);
         const [selectedRadio, setSelectedRadio] = useState<string>(radioOptions[0]);
         const [deleteAfterDaysValue, setDeleteAfterDaysValue] = useState<number>(14);
         const [deleteDurationValue, setDeleteDurationValue] = useState<string>(durationDropdownData[0].value);
+
+        useEffect(() => {
+            const storedData = localStorage.getItem("snapshotPolicyData");
+            if (storedData) {
+                const parsedData = JSON.parse(storedData);
+                setPolicyNameValue(parsedData.policyNameValue ?? "");
+                setDirectoryValue(parsedData.directoryValue ?? "");
+                setIsPolicyChecked(parsedData.isPolicyChecked ?? false);
+                setIsEnableSnapshotChecked(parsedData.isEnableSnapshotChecked ?? false);
+                setSelectedSchedule(parsedData.selectedSchedule ?? snapshotPolicyDropdownData[0].value);
+                setSelectedTime(parsedData.selectedTime ?? { hours: hoursDropdownData[0].value, minutes: minutesDropdownData[0].value });
+                setSelectedDays(parsedData.selectedDays ?? []);
+                setSelectedRadio(parsedData.selectedRadio ?? radioOptions[0]);
+                setDeleteAfterDaysValue(parsedData.deleteAfterDaysValue ?? 14);
+                setDeleteDurationValue(parsedData.deleteDurationValue ?? durationDropdownData[0].value);
+            }
+        }, []);
 
         const savePolicyHandler = () => {
             const dataToStore = {
@@ -29,7 +47,7 @@ const SnapshotPolicy
                 deleteAfterDaysValue,
                 deleteDurationValue
             }
-            console.log("🚀 ~ savePolicyHandler ~ dataToStore:", dataToStore)
+            localStorage.setItem("snapshotPolicyData", JSON.stringify(dataToStore));
         }
 
         return (

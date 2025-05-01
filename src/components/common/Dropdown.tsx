@@ -2,10 +2,17 @@ import { useState, useRef, useEffect } from 'react';
 import { IDropdownProps } from '../../interfaces/common/DropdownInterfaces';
 import { DATE } from '../../utils/Constants';
 
-const Dropdown: React.FC<IDropdownProps> = ({ options, defaultValue, onChange, type = "" }) => {
+const Dropdown = (props: IDropdownProps) => {
+    const { options, defaultValue, onChange, type = "" } = props
+
     const [isOpen, setIsOpen] = useState(false);
-    const [selected, setSelected] = useState<string>(defaultValue || options[0]?.value);
+    const [selected, setSelected] = useState<string>(defaultValue);
     const dropdownRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        setSelected(defaultValue)
+    }, [defaultValue])
+
 
     const handleOptionClick = (value: string) => {
         setSelected(value);

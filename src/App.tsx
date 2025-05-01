@@ -10,7 +10,6 @@ const App = () => {
     <div className='flex'>
       <Menu selectedItem={selectedItem} setSelectedItem={setSelectedItem} />
       <Panel selectedItem={selectedItem} />
-
     </div>
   )
 }
